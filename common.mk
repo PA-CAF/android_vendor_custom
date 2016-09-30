@@ -162,4 +162,9 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 #ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 #endif
 
+# AOSPA services 
+PRODUCT_PACKAGES += pa-services 
+PRODUCT_PACKAGES += co.aospa.power.ShutdownAOSPA.xml 
+PRODUCT_BOOT_JARS += pa-services 
+
 $(call inherit-product-if-exists, vendor/extra/product.mk)
