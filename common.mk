@@ -29,7 +29,14 @@ PRODUCT_COPY_FILES += \
     vendor/custom/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/custom/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/custom/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
-    vendor/custom/prebuilt/common/bin/whitelist:system/addon.d/whitelist \
+    vendor/custom/prebuilt/common/bin/whitelist:system/addon.d/whitelist
+
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/custom/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/custom/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/custom/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
