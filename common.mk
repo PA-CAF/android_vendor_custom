@@ -119,6 +119,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ThemeInterfacer
 
+# Build Chromium for Snapdragon (PA Browser)
+PRODUCT_PACKAGES += PABrowser
+
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
     SoundRecorder
