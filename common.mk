@@ -112,6 +112,9 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
+# Build Chromium for Snapdragon (PA Browser)
+PRODUCT_PACKAGES += PABrowser
+
 # Snapdragon packages
 PRODUCT_PACKAGES += \
     MusicFX \
