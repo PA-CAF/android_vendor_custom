@@ -21,4 +21,7 @@
     <!-- Whether to enable StorageCleaner Settings -->
     <bool name="enable_storage_cleanup">false</bool>
 
+   <!-- When true enable gesture setting. -->
+    <bool name="config_gesture_settings_enabled">true</bool>
+
 </resources>
