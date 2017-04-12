@@ -116,6 +116,11 @@ PRODUCT_PACKAGES += \
 # Build Shuttle Paranoid Android Edition
 PRODUCT_PACKAGES += Shuttle
 
+# Include PA GApps config
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/install/gapps-config.txt:install/gapps-config.txt
+
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
