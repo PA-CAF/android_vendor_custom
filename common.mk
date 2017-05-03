@@ -57,7 +57,7 @@ PRODUCT_COPY_FILES += \
 # Misc packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    Browser \
+    Jelly \
     libemoji \
     libsepol \
     e2fsck \
@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
     sqlite3 \
     strace \
     Terminal \
-    WallpaperPicker
+    WallpaperPicker 
 
 # Telephony packages
 PRODUCT_PACKAGES += \
