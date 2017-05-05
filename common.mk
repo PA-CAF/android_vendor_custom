@@ -143,13 +143,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += \
 	vendor/aosp/overlay/common
 
-# Proprietary latinime libs needed for Keyboard swyping
-ifneq ($(filter arm64,$(TARGET_ARCH)),)
+# Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-else
+    vendor/aosp/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+
+# import the arm64 one, if the device supports 64 bit
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+    vendor/aosp/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 endif
 
 # by default, do not update the recovery with system updates
