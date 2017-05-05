@@ -57,6 +57,7 @@ PRODUCT_COPY_FILES += \
 # Misc packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Camera2 \
     Jelly \
     libemoji \
     libsepol \
