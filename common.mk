@@ -35,7 +35,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/sysinit:system/bin/sysinit \
     vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aosp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/aosp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/aosp/prebuilt/root/init.pa.rc:root/init.pa.rc 
 
 # Init file
 PRODUCT_COPY_FILES += \
