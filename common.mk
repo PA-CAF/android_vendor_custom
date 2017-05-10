@@ -28,19 +28,8 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/whitelist:system/addon.d/whitelist \
 
 # Bootanimation
-# Include the custom PA bootanimation
-ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/bootanimation/480.zip:system/media/bootanimation.zip
-endif
-ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
-endif
-ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += vendor/aosp/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
-endif
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 # init.d support
 PRODUCT_COPY_FILES += \
