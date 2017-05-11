@@ -108,7 +108,6 @@ PRODUCT_PACKAGES += \
 # Snapdragon packages
 PRODUCT_PACKAGES += \
     MusicFX \
-    SnapdragonCamera \
     SnapdragonGallery \
     SnapdragonMusic
 
