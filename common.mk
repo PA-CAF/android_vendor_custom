@@ -46,6 +46,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.local.rc
 
+# Copy PA specific init file
+PRODUCT_COPY_FILES += vendor/aosp/prebuilt/root/init.pa.rc:root/init.pa.rc
+
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/aosp/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
