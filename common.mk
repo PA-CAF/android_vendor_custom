@@ -96,10 +96,13 @@ PRODUCT_PACKAGES += \
     messaging \
     CellBroadcastReceiver \
     Stk \
-    telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+PRODUCT_BOOT_JARS += tcmiface		
+# This jar is needed for MSIM manual provisioning and for other		
+# telephony related functionalities to work.		
+PRODUCT_BOOT_JARS += telephony-ext		
+PRODUCT_PACKAGES += telephony-ext
+
 
 # RCS
 PRODUCT_PACKAGES += \
