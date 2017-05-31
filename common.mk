@@ -80,7 +80,8 @@ PRODUCT_PACKAGES += \
     sqlite3 \
     strace \
     Terminal \
-    WallpaperPicker
+    WallpaperPicker \
+    ParanoidPapers
 
 # Telephony packages
 PRODUCT_PACKAGES += \
