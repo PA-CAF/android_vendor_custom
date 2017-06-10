@@ -20,10 +20,5 @@
 <!-- These resources are around just to allow their values to be customized -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
- <!-- Flags setup as productivity oriented in which case Downloads app will be presented
-             as Files app. Including showing of the Documents and "advanced" roots. -->
-    <bool name="productivity_device">true</bool>
-
- <!-- Add an option to show the size of files -->
-    <bool name="fileSize">true</bool>
+    <string name="downloads_label">"Documents"</string>
 </resources>
