@@ -30,4 +30,12 @@
 
     <!-- The duration in seconds to wait before the dismiss buttons are shown. -->
     <integer name="recents_task_bar_dismiss_delay_seconds">0</integer>
+
+    <!-- Whether to show a warning notification when the device reaches a certain temperature. -->
+    <integer name="config_showTemperatureWarning">1</integer>
+
+    <!-- Temp at which to show a warning notification if config_showTemperatureWarning is true.
+         If < 0, uses the value from HardwarePropertiesManager#getDeviceTemperatures. -->
+    <integer name="config_warningTemperature">55</integer>
+
 </resources>
