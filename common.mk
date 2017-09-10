@@ -66,6 +66,7 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs \
     bash \
+    busybox \
     Jelly \
     powertop \
     mount.exfat \
@@ -92,8 +93,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     messaging \
     CellBroadcastReceiver \
-    Stk \
-    telephony-ext
+    Stk
+
+# telephony related functionalities to work.
+PRODUCT_PACKAGES += telephony-ext
+
+# TCP Connection Management
+PRODUCT_PACKAGES += tcmiface
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -114,17 +120,13 @@ PRODUCT_PACKAGES += \
     SnapdragonCamera
 
 # Include explicitly to work around GMS issues
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librsjni
+PRODUCT_PACKAGES += libprotobuf-cpp-full
 
 # OMS
-PRODUCT_PACKAGES += \
-    ThemeInterfacer
+PRODUCT_PACKAGES += ThemeInterfacer
 
 # Mms depends on SoundRecorder for recorded audio messages
-PRODUCT_PACKAGES += \
-    SoundRecorder
+PRODUCT_PACKAGES += SoundRecorder
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
@@ -139,12 +141,17 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
+# Don't Hide APNs
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.hideapn=false
+
 # Selective SPN list for operator number who has the problem.
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
-PRODUCT_PACKAGE_OVERLAYS += \
-	vendor/aosp/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
+
+# Recommend using the non debug dexpreopter
+USE_DEX2OAT_DEBUG := false
 
 # Proprietary latinime libs needed for Keyboard swyping
 ifneq ($(filter arm64,$(TARGET_ARCH)),)
@@ -168,4 +175,10 @@ PRODUCT_PACKAGES += pa-services
 PRODUCT_PACKAGES += co.aospa.power.ShutdownAOSPA.xml 
 PRODUCT_BOOT_JARS += pa-services 
 
+# Copy PA specific init file
+PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/root/init.pa.rc:root/init.pa.rc
+
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+
+# Include proprietary header flags if vendor/head exists
+-include vendor/head/head-capabilities.mk
