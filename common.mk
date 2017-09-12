@@ -117,8 +117,8 @@ PRODUCT_PACKAGES += \
     MusicFX \
     SnapdragonGallery \
     SnapdragonMusic \
-    SnapdragonCamera
-
+    ParanoidCamera
+    
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full
 
