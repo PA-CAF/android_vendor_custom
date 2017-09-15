@@ -60,6 +60,7 @@ PRODUCT_COPY_FILES += \
 # Misc packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Browser \
     libemoji \
     libsepol \
     e2fsck \
@@ -67,7 +68,6 @@ PRODUCT_PACKAGES += \
     tune2fs \
     bash \
     busybox \
-    Jelly \
     powertop \
     mount.exfat \
     fsck.exfat \
