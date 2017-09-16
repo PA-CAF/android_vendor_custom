@@ -15,7 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true \
     ro.setupwizard.rotation_locked=true \
     ro.caf.version=$(shell grep "<default revision=" .repo/manifest.xml | awk -F'"' '{print $$2}' | awk  -F "/" '{print $$3}') \
-    ro.aosp-caf.version=$(shell grep "/AOSP-CAF" -A1 .repo/manifest.xml | tail -1 | awk -F'"' '{print $$2}' | awk -F "/" '{print $$3}')
+    ro.pa-caf.version=$(shell grep "/PA-CAF" -A1 .repo/manifest.xml | tail -1 | awk -F'"' '{print $$2}' | awk -F "/" '{print $$3}')
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
