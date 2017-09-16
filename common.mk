@@ -1,4 +1,5 @@
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
 # Include versioning information 
 # Format: Major.minor.maintenance(-TAG) 
 export CAF_VERSION := LA.UM.5.8.r1-02800-8x98.0
@@ -17,8 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.caf.version=$(shell grep "<default revision=" .repo/manifest.xml | awk -F'"' '{print $$2}' | awk  -F "/" '{print $$3}') \
     ro.pa-caf.version=$(shell grep "/PA-CAF" -A1 .repo/manifest.xml | tail -1 | awk -F'"' '{print $$2}' | awk -F "/" '{print $$3}')
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+PRODUCT_PROPERTY_OVERRIDES += ro.build.selinux=1
 
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
@@ -31,8 +31,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/whitelist:system/addon.d/whitelist \
 
 # Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -141,15 +140,13 @@ PRODUCT_PACKAGES += \
 endif
 
 # World APN list
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Don't Hide APNs
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.hideapn=false
 
 # Selective SPN list for operator number who has the problem.
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
 
