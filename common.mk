@@ -179,6 +179,9 @@ PRODUCT_BOOT_JARS += pa-services
 # Copy PA specific init file
 PRODUCT_COPY_FILES += vendor/aosp/prebuilt/common/root/init.pa.rc:root/init.pa.rc
 
+# Include support for preconfigured permissions
+PRODUCT_COPY_FILES += vendor/aosp/prebuilt/etc/default-permissions/pa-permissions.xml:system/etc/default-permissions/pa-permissions.xml
+
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Include proprietary header flags if vendor/head exists
