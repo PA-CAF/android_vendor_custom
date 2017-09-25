@@ -118,9 +118,9 @@ PRODUCT_PACKAGES += PABrowser
 # Snapdragon packages
 PRODUCT_PACKAGES += \
     MusicFX \
+    SnapdragonCamera \
     SnapdragonGallery \
-    SnapdragonMusic \
-    ParanoidCamera
+    SnapdragonMusic
     
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += libprotobuf-cpp-full
