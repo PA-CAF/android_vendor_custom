@@ -118,10 +118,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
 
-# OMS
-PRODUCT_PACKAGES += \
-    ThemeInterfacer
-
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
     SoundRecorder
@@ -175,10 +171,5 @@ else
 # include definitions for SDCLANG 
 include vendor/custom/sdclang/sdclang.mk 
 endif
-
-# AOSPA services 
-PRODUCT_PACKAGES += pa-services 
-PRODUCT_PACKAGES += co.aospa.power.ShutdownAOSPA.xml 
-PRODUCT_BOOT_JARS += pa-services 
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
