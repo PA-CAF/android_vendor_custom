@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Browser \
+    Jelly \
     libemoji \
     libsepol \
     e2fsck \
@@ -111,9 +112,6 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl_static \
     rcs_service_api \
     rcs_service_api.xml
-
-# Build Chromium for Snapdragon (PA Browser)
-PRODUCT_PACKAGES += PABrowser
 
 # Snapdragon packages
 PRODUCT_PACKAGES += \
