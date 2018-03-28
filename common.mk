@@ -1,5 +1,9 @@
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
+# Include versioning information 
+# Format: Major.minor.maintenance(-TAG) 
+export CAF_VERSION := LA.UM.6.4.r1-08500-8x98.0 	
+
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.com.google.clientidbase=android-google \
