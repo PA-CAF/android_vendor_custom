@@ -159,4 +159,17 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
 
+
+ifneq ($(HOST_OS),linux) 
+ifneq ($(sdclang_already_warned),true) 
+$(warning **********************************************) 
+$(warning * SDCLANG is not supported on non-linux hosts.) 
+$(warning **********************************************) 
+sdclang_already_warned := true 
+endif 
+else 
+# include definitions for SDCLANG 
+include vendor/custom/sdclang/sdclang.mk 
+endif
+
 $(call inherit-product-if-exists, vendor/extra/product.mk)
