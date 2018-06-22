@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013 The CyanogenMod Project
-
+     Copyright (C) 2015-2017 Paranoid Android
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,6 +17,14 @@
         <item>com.google.android.gms</item>
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
+    </string-array>
+
+    <!-- A list of potential packages, in priority order, that may contain an
+         ephemeral resolver. Each package will be be queried for a component
+         that has been granted the PACKAGE_EPHEMERAL_AGENT permission.
+         This may be empty if ephemeral apps are not supported. -->
+    <string-array name="config_ephemeralResolverPackage">
+        <item>com.google.android.gms</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -91,6 +96,4 @@
 
     <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
     <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
-    <string name="config_mms_user_agent">AOSP</string>
-    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 </resources>

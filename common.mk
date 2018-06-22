@@ -82,9 +82,12 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace \
+    Launcher3 \
     Terminal \
     WallpaperPicker \
-	ParanoidPapers
+    ParanoidCamera \
+    ParanoidPapers
+    
 
 # Telephony packages
 PRODUCT_PACKAGES += \
