@@ -1,6 +1,6 @@
 #!/system/bin/sh
 #
-# LineageOS A/B OTA Postinstall Script
+# PA-CAF A/B OTA Postinstall Script
 #
 
 # Mount without a context and perform backuptool operations

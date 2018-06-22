@@ -42,6 +42,14 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/custom/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
+# Include PA-CAF audio files
+include vendor/custom/config/custom_audio.mk
+
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/custom/config/twrp.mk
+endif
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/custom/prebuilt/common/bin/sysinit:system/bin/sysinit \
@@ -127,6 +135,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
+
+-include vendor/custom/config/partner_gms.mk
 
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
